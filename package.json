@@ -4,18 +4,14 @@
   "description": "Generate lint configurations from scratch",
   "main": "index.js",
   "scripts": {
-    "eslint": "node_modules/.bin/eslint ."
+    "eslint": "node_modules/.bin/eslint .",
+    "patch-release": "npm version patch && npm publish && git push --follow-tags"
   },
   "author": "Will Klein",
   "license": "MIT",
   "dependencies": {
+    "eslint": "~0.21.2",
     "lodash": "~3.9.1",
     "prettyjson": "~1.1.2"
-  },
-  "devDependencies": {
-    "eslint": "^0.21.2"
-  },
-  "peerDependencies": {
-    "eslint": "~0.21.2"
   }
 }
