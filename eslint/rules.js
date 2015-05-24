@@ -1,4 +1,7 @@
 module.exports = {
+  /*
+   * All rules excluding any that are deprecated.
+   */
   list: [
     "comma-dangle",
     "no-cond-assign",
@@ -107,7 +110,7 @@ module.exports = {
     "indent",
     "key-spacing",
     "linebreak-style",
-    "max-nested-callbacks",
+    // "max-nested-callbacks", - this requires a threshold, ignore for now
     "new-cap",
     "new-parens",
     "newline-after-var",
@@ -155,10 +158,61 @@ module.exports = {
     "no-plusplus"
   ],
 
+  /*
+   * Enumerate options. Checking non-default options is not yet implemented.
+   *
+   * In the case of an array, the first value is the default. Subsequent values
+   * are additional options that should be tried.
+   *
+   * In the case of an object, each key has an array of values. The first value
+   * is the default, and subsequent values are additional options.
+   *
+   * Options that follow another pattern or do not have enumerable values are
+   * excluded.
+   */
   modes: {
-    "quotes": [ "double", "single", "backtick" ]
+    "brace-style": [ "1tbs", "stroustrup" ],
+    "camelcase": { "properties": [ "always", "never" ] },
+    "comma-dangle": [ "never", "always", "always-multiline" ],
+    "comma-spacing": { "before": [ false, true ], "after": [ true, false ] },
+    "comma-style": [ "last", "first" ],
+    "curly": [ "all", "multi", "multi-line" ],
+    "dot-location": [ "object", "property" ],
+    "eqeqeq": [ null, "smart", "allow-null" ],
+    "func-style": [ "expression", "declaration" ],
+    "generator-star-spacing": [ "before", "after", "both", "neither" ],
+    "indent": [ 4, 2, "tab" ], // there is more, but let's check these for now
+    "linebreak-style": [ "unix", "windows" ],
+    "new-cap": { "newIsCap": [ true, false ], "capIsNew": [ true, false ] },
+    "no-cond-assign": [ "except-parens", "always" ],
+    "no-inner-declarations": [ "functions", "both" ],
+    "no-mixed-spaces-and-tabs": [ null, "smart-tabs" ],
+    "no-multiple-empty-lines": { "max": [ 1, 2 ] }, // let's check these for now
+    "no-trailing-spaces": { skipBlankLines: [ false, true ] },
+    "no-unused-vars": { "vars": [ "all", "local" ], "args": [ "after-used", "all", "none" ] },
+    "object-shorthand": [ "always", "methods", "properties", "never" ],
+    "one-var": [ "always", "never" ], // object option skipped
+    "operator-assignment": [ "always", "never" ],
+    "operator-linebreak": [ "after", "before", "none" ],
+    "padded-blocks": [ "always", "never" ],
+    "quote-props": [ "always", "as-needed" ],
+    "quotes": [ "double", "single", "backtick" ],
+    "semi": [ "always", "never" ],
+    "semi-spacing": { "before": [ false, true ], "after": [ true, false ] },
+    "sort-vars": { "ignoreCase": [ false, true ] },
+    "space-before-function-paren": [ "always", "never" ], // object option skipped
+    "space-in-brackets": [ "never", "always" ],
+    "space-in-parens": [ "never", "always" ], // exceptions skipped
+    "space-infix-ops": { "int32Hint": [ false, true ] },
+    "space-unary-ops": { "words": [ true, false ], "nonwords": [ false, true ] },
+    "strict": [ null, "never", "global", "function" ],
+    "wrap-iife": [ "outside", "inside", "any" ]
   },
 
+  /*
+   * Rules that default their error level to 0. Omitting rules based on their
+   * defaults is not yet implemented.
+   */
   defaultsOff: [
     "no-comma-dangle",
     "no-extra-parens",
@@ -196,7 +250,7 @@ module.exports = {
     "func-style",
     "indent",
     "linebreak-style",
-    "max-nested-callbacks",
+    // "max-nested-callbacks", - this requires a threshold, ignore for now
     "newline-after-var",
     "no-continue",
     "no-inline-comments",
