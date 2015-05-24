@@ -29,9 +29,9 @@ The following process is recommended:
 
 After step 1, you're done with dryer. It gives you a starting point for your linting configs; the rest is up to you!
 
- ## About
+## About
 
- I recently transitioned my company's main repos from JSHint to ESLint. I hand-crafted an initial `.eslintrc` file through trial-and-error, until I had a configuration with no errors, and a handful of warnings. To make this process easier, I've written this tool to auto-generate linting configs with a similar heuristic.
+I recently transitioned my company's main repos from JSHint to ESLint. I hand-crafted an initial `.eslintrc` file through trial-and-error, until I had a configuration with no errors, and a handful of warnings. To make this process easier, I've written this tool to auto-generate linting configs with a similar heuristic.
 
 ## Under Development
 
