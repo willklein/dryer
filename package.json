@@ -1,7 +1,7 @@
 {
   "name": "dryer",
   "version": "0.1.1",
-  "description": "Tumble dry your linting rules",
+  "description": "Generate lint configurations from scratch",
   "main": "index.js",
   "scripts": {
     "eslint": "node_modules/.bin/eslint ."
@@ -9,10 +9,13 @@
   "author": "Will Klein",
   "license": "MIT",
   "dependencies": {
-    "prettyjson": "~1.1.2",
-    "lodash": "~3.9.1"
+    "lodash": "~3.9.1",
+    "prettyjson": "~1.1.2"
   },
   "devDependencies": {
     "eslint": "^0.21.2"
+  },
+  "peerDependencies": {
+    "eslint": "~0.21.2"
   }
 }
