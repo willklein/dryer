@@ -1,6 +1,6 @@
 # dryer
 
-dryer is a tool for generating lint configuration from scratch. dryer will run a linter with all rules enabled to determine what conventions your code already follows.
+dryer is a tool for generating lint configurations from scratch. dryer will run a linter with all rules enabled to determine what conventions your code already follows.
 
 ## Usage
 
@@ -16,7 +16,7 @@ You can also provide a threshold for setting rules to warn based on the failure 
 
     dryer . 5
 
-## Guide
+### Guide
 
 The following process is recommended:
  1. Run dryer on your project
@@ -31,12 +31,13 @@ dryer is under active development and its API may change at any time. Currently,
 
 ## Current Limitations
 
-While this works with ESLint, there are a handful of limitations currently:
+There are a handful of limitations currently:
 
-* does not read an existing config file
-* overwrites any existing file
+* only works with ESLint
+* does not read an existing `.eslintrc`
+* overwrites any existing `.eslintrc`
 * does not configure:
   * environment
   * globals
   * parser
-* writes rules that are enabled by default, where they could be excluded
+* all rules are configured, even when could be excluded (enabled by default)
