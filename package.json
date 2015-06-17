@@ -11,6 +11,11 @@
   },
   "author": "Will Klein",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/willklein/dryer.git"
+  },
+  "bugs": "https://waffle.io/willklein/dryer",
   "dependencies": {
     "eslint": "~0.21.2",
     "lodash": "~3.9.1",
