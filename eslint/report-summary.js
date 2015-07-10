@@ -1,3 +1,4 @@
+var _ = require('lodash');
 var prettyjson = require('prettyjson');
 
 var log = function(data) {
@@ -9,7 +10,7 @@ module.exports = function(rulesRegistry, threshold) {
   var warningRules = [];
   var disabledRules = [];
 
-  Object.keys(rulesRegistry).forEach(function(rule, ruleId) {
+  _.each(rulesRegistry, function(rule, ruleId) {
     var count = rule.count;
 
     if (count === 0) {
