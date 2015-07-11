@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/willklein/dryer.png?label=ready&title=Ready)](https://waffle.io/willklein/dryer)
 # dryer
 
 dryer is a tool for generating lint configurations from scratch. dryer will run a linter with all rules enabled to determine what conventions your code already follows.
