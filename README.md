@@ -3,9 +3,13 @@
 
 dryer is a tool for generating lint configurations from scratch. dryer will run a linter with all rules enabled to determine what conventions your code already follows.
 
-## Under Development
+## Project Status
 
-dryer is under active development and its API may change at any time. Currently, only eslint is supported, but the plan is to add other linters in the future.
+dryer is not stable and its API may change at any time. Currently, only eslint is supported, but the plan is to add other linters in the future.
+
+__2016 10 18 Update__: @ianvs did the work of adding the basic functionality to ESLint via the `--init` flag. From here I'd like to pivot the tool to solving the same problem a different way. Rather than running ESLint configured with multiple permutations of the config in several passes, I'd like to try writing a more general purpose analyzer that can actually count how many times a given pattern exists. This would be more efficient, and also lend itself toward 1) supporting multiple linters and 2) generating a style guide. Some talk of this on Twitter: https://twitter.com/ColinEberhardt/status/788411749385039873
+
+I have no idea if the current version of dryer plays well with the latest version of ESLint. If you notice any problems, you can file an issue, or even submit a pull request. :)
 
 __2015 07 15 Update__: I'm exploring folding dryer into ESLint. I've already made significant improvements, including:
 
